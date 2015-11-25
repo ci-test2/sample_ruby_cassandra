@@ -2,6 +2,10 @@ language: ruby
 
 services:
   - cassandra
+  
+env:
+  - FOO=foo BAR=bar
+  - FOO=bar BAR=foo
 
 install:
   - gem install cassandra
@@ -18,4 +22,4 @@ archive: true
 notifications:
   email: false
   
-cache: true
+#cache: true
