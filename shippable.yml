@@ -6,7 +6,7 @@ services:
 env:
   - FOO=foo BAR=bar
   - FOO=bar BAR=foo
-  - secure: Y3w6uP6aSYX4IxlqWljMty/5kM+9UYSBmZkeNlKamtnqDxwfoTwV0K3lKqLVacieDfrMJbGrYouyIqsHXGSlCwhvSEGgowTSws4Zvz/cysHceO5aPakPRDiZZagi+mpGUvOHX+oh5GJwRBvXdQyawv/Hsjlh7EE6sEcRaY05bw2OxT3wNv1FbyBVbJZWmjZKJEDhcbQ2A9qgRkRLIv+npQ3+bQXrl2hVALYihgPic48wwVv0tle74gnmVG3gWf7mtbPGe8fEBDFFA5ay8/dsBXqxcZi8ZeMjvUkOVW+i87zdBv09sPGXlOjd4DrxmfzHwtIQk3Wdc2iNUBoN92x6xQ== 
+  - secure: WWjuQWhrSBb4+BwpD/gos/jlfzykAB0+UCZvCFGv6NDDS/kZVP99QflxGsbk/K/xgm7j+AVpsOrecPKng4jsUv68/WtzI8P66NlvgQxfBhZ7QKguhZ72/Rnr70B6CE2Eow5l5Ax8AyU2k9bu+TIAbDqtIchJjR6ug3p/3k/UhZY1gEMIa6mSrSMyH7ysoxQoG4EwiFvaplWxp5RsDkWj/IdCt1UTNNIAM8oWBUhAt1AmWYkCRmzidgN3QIWmTpCMKdW49YHLQ5tg7SDZmWwmfu0LTgBl6SNAlNeNh4Dx2ZLeuRPR2OqAFX3LJp1sg1WN1hPWGvVO8g8zn4pr/dA9uw== 
 
 install:
   - gem install cassandra
@@ -17,7 +17,7 @@ script:
   - cassandra-cli -host localhost -port 9160 -f schema.txt
   - ruby sample.rb
   - cassandra-cli -host localhost -port 9160 -f removeKeyspace.txt
-  - echo $FOO
+  - echo $key1
   
 archive: true
 
